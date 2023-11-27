@@ -92,6 +92,6 @@ io.on('connection', (socket) => {
 
 const PORT = 8000;
 
-server.listen(PORT, () => {
+server.listen(process.env.PORT || PORT, () => {
     console.log(`Servidor escuchando en el puerto ${PORT}`);
 });

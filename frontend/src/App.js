@@ -15,7 +15,7 @@ import {
     UsuarioItem,
 } from './ui-componentes';
 
-const socket = io('http://localhost:8000');
+const socket = io('https://enigmatic-headland-23898-58474ba765b2.herokuapp.com/');
 
 
 
@@ -71,7 +71,7 @@ function App() {
     };
 
     const getGrupos = () => {
-        Axios.get("http://localhost:8000/grupos").then((response) => {
+        Axios.get('https://enigmatic-headland-23898-58474ba765b2.herokuapp.com/grupos').then((response) => {
             if (Array.isArray(response.data)) {
                 setGruposList(response.data);
                 document.querySelector(".losGrupos").style.display = "block";
