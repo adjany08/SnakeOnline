@@ -15,7 +15,7 @@ import {
     UsuarioItem,
 } from './ui-componentes';
 
-const socket = io('https://enigmatic-headland-23898-58474ba765b2.herokuapp.com/');
+const socket = io('https://glacial-anchorage-05740-018c736b7699.herokuapp.com/');
 
 
 
@@ -71,7 +71,7 @@ function App() {
     };
 
     const getGrupos = () => {
-        Axios.get('https://enigmatic-headland-23898-58474ba765b2.herokuapp.com/grupos').then((response) => {
+        Axios.get('https://glacial-anchorage-05740-018c736b7699.herokuapp.com/grupos').then((response) => {
             if (Array.isArray(response.data)) {
                 setGruposList(response.data);
                 document.querySelector(".losGrupos").style.display = "block";
