@@ -1,0 +1,118 @@
+* {
+  font-family: 'Comic Sans MS', cursive, sans-serif; 
+  color: #ffffff;
+}
+.App{
+  text-align: center;
+}
+.inicio {
+  display: none;
+  text-align: center;
+}
+body{
+  background-color: #000000;
+}
+.App::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: radial-gradient(circle, #62d7eb, #00CED1, #008B8B, #008B8B, #191970, #000000);
+  background-size: 100% 100%;
+  animation: ondas 10s ease-in-out infinite, parpadeo 15s infinite;
+  pointer-events: none;
+}
+
+@keyframes ondas {
+  0% {
+    background-position: 0% 0%;
+  }
+  25% {
+    background-position: 0% 0%;
+  }
+  50% {
+    background-size: 120% 120%;
+    background-position: 100% 0%;
+  }
+  75% {
+    background-position: 100% 0%;
+  }
+  100% {
+    background-size: 100% 100%;
+    background-position: 0% 0%;
+  }
+}
+
+@keyframes parpadeo {
+  0%, 25%, 50%, 75%, 100% {
+    opacity: 0.4;
+  }
+  12.5%, 37.5%, 62.5%, 87.5% {
+    opacity: 0.08;
+  }
+} 
+
+
+.datos, .menu{
+  display: flex;
+  flex-direction: column; 
+  align-items: center;
+  width: 40%; 
+  margin: auto;
+  border-left: 15px solid #008B8B; 
+  border-right: 15px solid #008B8B; 
+  border-bottom: 5px solid #008B8B; 
+  border-top: 5px solid #008B8B; 
+  border-radius: 20px;
+  padding: 20px; 
+}
+
+.losGrupos, .crearGrupo{
+  display: none;
+}
+
+#colorPicker{
+  width: 40px;
+  height: 40px;
+  border-radius: 40%;
+  border: 2px solid #000000;
+  margin: 2px;
+}
+
+.btn-main {
+  --color: #62d7eb;
+  --hover: #8ed9f5;
+  
+
+  color: var(--color);
+  transition: 0.25s;
+  background: none;
+  border: 2px solid;
+  font-family: 'Comic Sans MS', cursive, sans-serif; 
+  border-radius: 12px;
+  font-size: 18px; 
+  width: 250px;
+  height: 50px;
+  line-height: 1;
+  margin: 0.5em;
+  padding: 1em 2em;
+}
+
+.btn-main:hover,
+.btn-main:focus {
+  border-color: var(--hover);
+  color: #fff;
+  box-shadow: 0 0.5em 0.5em -0.4em var(--hover);
+  transform: translateY(-0.25em);
+}
+
+.input {
+  background-color: transparent; /* Fondo transparente */
+  color: white; /* Letra blanca */
+  border: 1px solid white; /* Borde blanco de 1 píxel */
+  border-radius: 5px; /* Bordes redondeados */
+  padding: 8px; /* Ajusta el relleno según tus preferencias */
+  margin-left: 4px;
+}
